@@ -1,0 +1,12 @@
+﻿@model IEnumerable<FeatureFlags.Features.FeatureSetting>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Features</h2>
+
+@foreach (var setting in Model)
+{
+    <div>Name: @setting.Name, Description: @setting.Description, Active: @setting.IsActive</div>
+}

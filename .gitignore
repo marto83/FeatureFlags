@@ -1,0 +1,15 @@
+# GIT IGNORE FILE
+_ReSharper.*
+*.suo
+*.ReSharper.user
+[Oo]bj
+*.cache
+bin
+*.csproj.user
+build/prepare
+App_Data/
+App_Data/*
+*.orig
+
+/packages/RavenDB*/server/Data/*
+/packages/RavenDB*/server/Logs/*
