@@ -11,7 +11,7 @@ namespace FeatureFlags.Features
 
         public static IEnumerable<FeatureSetting> GetFeatures()
         {
-            var features = typeof(FeatureConfig).Assembly.GetTypes().Where(type => type.IsSubclassOf(typeof(Feature)));
+            var features = typeof(FeatureConfig).Assembly.GetTypes().Where(type => type.IsSubclassOf(typeof(Feature)) && type.IsAbstract == false);
             foreach (var featureType in features)
             {
                 var feature = Activator.CreateInstance(featureType) as Feature;
@@ -25,7 +25,7 @@ namespace FeatureFlags.Features
             {
                 if (key.StartsWith("Feature."))
                 {
-                    var flagName = key.Substring(key.IndexOf('.') + 1) ;
+                    var flagName = key.Substring(key.IndexOf('.') + 1);
                     flagSettings[flagName.ToLower()] = ConfigurationManager.AppSettings[key] == "on";
                 }
             }

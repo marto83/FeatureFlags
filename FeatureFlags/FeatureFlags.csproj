@@ -67,6 +67,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Features\ConfigurationFeature.cs" />
     <Compile Include="Features\CurrentTimeFeature.cs" />
+    <Compile Include="Features\DebugFeature.cs" />
     <Compile Include="Features\Feature.cs" />
     <Compile Include="Features\FeatureConfig.cs" />
     <Compile Include="Features\FeatureExtensions.cs" />

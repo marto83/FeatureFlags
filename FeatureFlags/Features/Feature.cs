@@ -18,9 +18,12 @@ namespace FeatureFlags.Features
 
         public static bool Enabled<T>() where T : Feature
         {
-            string featureName = typeof(T).Name;
             var feature = Activator.CreateInstance<T>();
-            return FeatureConfig.IsActive(featureName) && feature.IsFeatureEnabled();
+            return FeatureConfig.IsActive(GetFeatureName(typeof(T))) && feature.IsFeatureEnabled();
+        }
+        private static string GetFeatureName(Type featureType)
+        {
+            return featureType.Name.Replace("Feature", "");
         }
     }
 

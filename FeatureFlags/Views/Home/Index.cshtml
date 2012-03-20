@@ -12,3 +12,8 @@
 {
     Html.RenderAction("CurrentTime");
 }
+
+@if (Html.IsEnabled<DebugFeature>())
+{
+    <p>Debug is enabled. This must be as dev environment</p>
+}
