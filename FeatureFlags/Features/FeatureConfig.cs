@@ -5,13 +5,6 @@ using System.Configuration;
 
 namespace FeatureFlags.Features
 {
-    public class FeatureSetting
-    {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public bool IsActive { get; set; }
-    }
-
     public class FeatureConfig
     {
         public static Dictionary<string, bool> flagSettings = new Dictionary<string, bool>();
@@ -42,7 +35,5 @@ namespace FeatureFlags.Features
         {
             return flagSettings.ContainsKey(flagName.ToLower()) ? flagSettings[flagName.ToLower()] : false;
         }
-
-
     }
 }

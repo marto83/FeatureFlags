@@ -65,9 +65,14 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Features\EnabledFeature.cs" />
+    <Compile Include="Features\ConfigurationFeature.cs" />
+    <Compile Include="Features\CurrentTimeFeature.cs" />
+    <Compile Include="Features\Feature.cs" />
     <Compile Include="Features\FeatureConfig.cs" />
     <Compile Include="Features\FeatureExtensions.cs" />
+    <Compile Include="Features\FeatureSetting.cs" />
+    <Compile Include="Features\MartinsNewFeature.cs" />
+    <Compile Include="Features\QueryStringFeature.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
